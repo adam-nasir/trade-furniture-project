@@ -1,7 +1,11 @@
 import "./header.css";
-
+import { Navbar } from "../../components";
 function Header() {
-  return <div>Header</div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
 export default Header;

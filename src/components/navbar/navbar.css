@@ -1,0 +1,53 @@
+.navbar {
+  padding: 3.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__list-content {
+  display: flex;
+}
+.navbar__list {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-text);
+}
+
+.navbar__link {
+  position: relative;
+  color: var(--color-text);
+  margin-left: 3.1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  top: 100%;
+  left: 1px;
+  background-color: var(--color-light-bg);
+  transition: width 0.2s ease-in;
+}
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+.navbar__user-content {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__menu {
+  display: none;
+}
+
+.account,
+.shopping-cart {
+  padding-left: 3.1rem;
+  color
+}

@@ -1,7 +1,11 @@
 import "./Featuresone.css";
-
+import { Button } from "../../components";
 function FeaturesOne() {
-  return <div>FeaturesOne</div>;
+  return (
+    <div className="featureone">
+      <Button />
+    </div>
+  );
 }
 
 export default FeaturesOne;
