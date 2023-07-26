@@ -1,17 +1,46 @@
+import { useState, useRef } from "react";
+import { gsap } from "gsap";
 import "./navbar.css";
 import logo from "../../assets/svgs/logo.svg";
-import menu from "../../assets/svgs/hamburger.svg";
 
 import { RiAccountCircleFill } from "react-icons/ri";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { MdOutlineClose } from "react-icons/md";
+import { HiMenuAlt3 } from "react-icons/hi";
+
 function Navbar() {
+  const handleClickAnimate = () => {
+    let ctx = gsap.context(() => {
+      gsap.to("body", { overflowY: "hidden", duration: 0.2 });
+      gsap.to(".overlay", { display: "block", duration: 0.3 });
+      gsap.to(".navbar__list-content", { x: 0, duration: 0.4 });
+    });
+  };
+
+  const handleClickStop = () => {
+    let ctx = gsap.context(() => {
+      gsap.to(".overlay", { display: "none", duration: 0.2 });
+      gsap.to("body", { overflowY: "auto", duration: 0.3 });
+      gsap.to(".navbar__list-content", { x: 300, duration: 0.4 });
+    });
+  };
+
   return (
     <nav className="navbar">
+      <div onClick={handleClickStop} className="overlay"></div>
       <div className="navbar-container container">
         <header className="logo-content">
-          <img src={logo} alt="Trade logo" />
+          <a href="#home">
+            <img src={logo} alt="Trade logo" />
+          </a>
         </header>
         <div className="navbar__list-content">
+          <MdOutlineClose onClick={handleClickStop} className="closebtn" />
+          <header className="logo-content-mobile">
+            <a href="#home">
+              <img src={logo} alt="Trade logo" />
+            </a>
+          </header>
           <ul className="navbar__list">
             <li className="navbar__item">
               <a href="#home" className="navbar__link">
@@ -34,9 +63,10 @@ function Navbar() {
             <AiOutlineShoppingCart className="shopping-cart" />
           </div>
         </div>
-
-        <div className="navbar__menu">
-          <img src={menu} className="" alt="hamburger menu" />
+        <div className="navbar__user-content-mobile">
+          <RiAccountCircleFill className="account" />
+          <AiOutlineShoppingCart className="shopping-cart" />
+          <HiMenuAlt3 onClick={handleClickAnimate} className="navbar__menu" />
         </div>
       </div>
     </nav>

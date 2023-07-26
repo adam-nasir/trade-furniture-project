@@ -1,11 +1,7 @@
 import "./Featuresone.css";
-import { Button } from "../../components";
+import { ButtonLight } from "../../components";
 function FeaturesOne() {
-  return (
-    <div className="featureone">
-      <Button />
-    </div>
-  );
+  return <div className="featureone"></div>;
 }
 
 export default FeaturesOne;

@@ -48,3 +48,40 @@ select {
   margin: auto;
   padding-inline: 4rem;
 }
+
+/* Underlines */
+
+.underline-light,
+.underline-dark {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.underline-light::after,
+.underline-dark::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 80%;
+  left: 0;
+  height: 15px;
+  width: 110%;
+}
+.underline-light::after {
+  background-color: var(--color-light-bg);
+}
+
+.underline-dark::after {
+  background-color: var(--color-dark-bg);
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 1600px) {
+  .container {
+    max-width: unset;
+    margin: auto;
+    padding-inline: 7rem;
+  }
+}

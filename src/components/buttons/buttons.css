@@ -1,0 +1,31 @@
+.btn {
+  display: inline-block;
+  padding: 1.3rem 4.3rem;
+  border-radius: 9px;
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-family-text);
+
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.035px;
+}
+
+.btn-light {
+  border: none;
+  background: #83a9ac;
+  transition: background 0.4s ease;
+}
+.btn-light:hover {
+  background: #8eccd0;
+}
+
+.btn-dark {
+  border: none;
+  background: #83a9ac;
+  transition: background 0.4s ease;
+}
+.btn-dark:hover {
+  background: #8eccd0;
+}
