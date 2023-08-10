@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;700&display=swap");
 
 :root {
   /* Font Variable */
   --font-family-title: "DM Serif Display", serif;
-  --font-family-text: "Roboto", sans-serif;
+  --font-family-text: "Poppins", sans-serif;
 
   /* Color Variables */
   --color-dark-bg: #242a2f;
   --color-light-bg: #83a9ac;
   --color-block: #273541;
   --color-light-text: #ffffff;
-  --color-dark-text: #bcbcbc;
+  --color-dark-text: #d2d2d2;
 }

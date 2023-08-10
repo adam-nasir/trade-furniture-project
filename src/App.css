@@ -12,6 +12,7 @@
 
 html {
   font-size: 62.5%;
+
   /* color-scheme: light dark; */
 }
 
@@ -51,23 +52,22 @@ select {
 
 /* Underlines */
 
-.underline-light,
-.underline-dark {
+.underline {
   position: relative;
   display: inline-block;
   z-index: 1;
 }
 
-.underline-light::after,
-.underline-dark::after {
+.underline::after {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 80%;
+  top: 75%;
   left: 0;
   height: 15px;
-  width: 110%;
+  width: var(--myWidth);
 }
+
 .underline-light::after {
   background-color: var(--color-light-bg);
 }
@@ -75,6 +75,8 @@ select {
 .underline-dark::after {
   background-color: var(--color-dark-bg);
 }
+
+/* CSS Animation */
 
 /* Media Queries */
 
