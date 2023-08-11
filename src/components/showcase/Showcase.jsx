@@ -38,7 +38,7 @@ function Showcase() {
           ".showcase .underline ",
           {
             "--myWidth": "0%",
-            duration: 3,
+            duration: 1,
           },
           {
             "--myWidth": "105%",
@@ -53,6 +53,16 @@ function Showcase() {
         ".showcase__text-content",
         { opacity: 0, y: -20, duration: 1 },
         { opacity: 1, y: 0, duration: 1 }
+      ).fromTo(
+        ".showcase .underline ",
+        {
+          "--myWidth": "0%",
+          duration: 1,
+        },
+        {
+          "--myWidth": "105%",
+          duration: 2,
+        }
       );
     }
   });

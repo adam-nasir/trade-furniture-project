@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 8.4rem 3rem;
+  padding: 5rem 3rem;
   border-radius: 1.4rem;
   margin-inline: 3rem;
 }
@@ -17,4 +17,39 @@
 .testimonies-card__stars {
   width: 20rem;
   margin-bottom: 2rem;
+}
+
+.testimonies-card__text {
+  margin-bottom: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.7px;
+}
+
+.testimones-card__customer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimones-card__customer-img {
+  border-radius: 100%;
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+}
+
+.testimones-card__customer-name {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135.938%;
+}
+
+.testimones-card__customer-location {
+  color: rgba(251, 251, 251, 0.74);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 135.938%;
 }

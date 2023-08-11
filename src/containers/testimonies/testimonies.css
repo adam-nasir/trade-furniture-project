@@ -10,3 +10,10 @@
 .swiper {
   width: 100%;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+/* .swiper-button-next; */
