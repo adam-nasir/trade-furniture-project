@@ -1,5 +1,6 @@
 import "./testimoniescard.css";
 import stars from "../../../assets/svgs/stars.svg";
+
 function TestimoniesCard({ name, customerImg, location }) {
   return (
     <div className="testimonies-card">

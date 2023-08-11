@@ -2,4 +2,19 @@
   background-color: var(--color-dark-bg);
   color: var(--color-light-text);
   font-family: var(--font-family-text);
+  text-align: center;
+}
+
+.testimonies-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8.4rem 3rem;
+  border-radius: 1.4rem;
+  margin-inline: 3rem;
+}
+
+.testimonies-card__stars {
+  width: 20rem;
+  margin-bottom: 2rem;
 }

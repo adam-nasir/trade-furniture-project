@@ -1,3 +1,12 @@
 .testimonies {
   background-color: var(--color-light-bg);
 }
+.testimonies-container {
+  padding-block: 8.4rem;
+}
+
+/* Swiper CSS Styling */
+
+.swiper {
+  width: 100%;
+}

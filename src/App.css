@@ -50,6 +50,32 @@ select {
   padding-inline: 4rem;
 }
 
+/* This target all the light section titles */
+
+.section__title {
+  text-align: center;
+  color: var(--color-light-text);
+  font-family: var(--font-family-title);
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.938%; /* 105.774px */
+  letter-spacing: 2.59px;
+  margin-bottom: 0.2rem;
+}
+
+.section__subtext {
+  text-align: center;
+  color: var(--color-light-text);
+  font-family: var(--font-family-title);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  /* 37.905px */
+  letter-spacing: 0.84px;
+  margin-bottom: 4.5rem;
+}
+
 /* Underlines */
 
 .underline {
