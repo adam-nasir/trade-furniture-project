@@ -9,6 +9,7 @@
 
 .swiper {
   width: 100%;
+  height: 100%;
 }
 
 .swiper-button-prev,
@@ -16,4 +17,12 @@
   color: white;
 }
 
-/* .swiper-button-next; */
+.swiper-pagination {
+  position: relative;
+  transform: translateY(-10px);
+  color: white;
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+}

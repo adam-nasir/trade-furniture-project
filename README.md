@@ -6,6 +6,7 @@
 - [x] read this https://greensock.com/forums/topic/31518-how-to-get-after-pseudo-element/
 - [x] Fix the line animation
 - [x] Implement swiper
+- [ ] Read https://edidiongasikpo.com/using-gsap-scrolltrigger-plugin-in-react
 
 ## Code Snippet
 

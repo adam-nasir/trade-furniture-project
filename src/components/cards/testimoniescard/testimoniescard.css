@@ -14,6 +14,12 @@
   margin-inline: 3rem;
 }
 
+.testimones-card__customer-title {
+  font-family: var(--font-family-title);
+  font-size: 3.1rem;
+  margin-bottom: 1.3rem;
+}
+
 .testimonies-card__stars {
   width: 20rem;
   margin-bottom: 2rem;
