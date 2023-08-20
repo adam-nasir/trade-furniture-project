@@ -1,10 +1,11 @@
 import { useState, useLayoutEffect, useEffect } from "react";
 import { gsap } from "gsap";
-import "./showcase.css";
-import { ButtonLight } from "../../components";
-import showcaseImg from "../../assets/images/showcase-img-4.png";
+import aboutUsImg from "../../assets/images/about-us-img.png";
+import "./aboutus.css";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-function Showcase() {
+function AboutUs() {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
@@ -22,20 +23,25 @@ function Showcase() {
   useLayoutEffect(() => {
     if (windowSize.innerWidth >= 947) {
       let tl = gsap.timeline({
-        delay: 0.8,
+        scrollTrigger: {
+          trigger: ".about-us-container",
+          start: "20px",
+          end: "bottom",
+          markers: true,
+        },
       });
       tl.fromTo(
-        ".showcase__image-content",
+        ".about-us__image-content",
         { opacity: 0, y: -30, duration: 1 },
         { opacity: 1, y: 0, duration: 1 }
       )
         .fromTo(
-          ".showcase__text-content",
+          ".about-us__text-content",
           { opacity: 0, x: -20, duration: 1 },
           { opacity: 1, x: 0, duration: 1 }
         )
         .fromTo(
-          ".showcase .underline ",
+          ".about-us .underline ",
           {
             "--myWidth": "0%",
             duration: 1,
@@ -50,11 +56,11 @@ function Showcase() {
         delay: 0.8,
       });
       tl.fromTo(
-        ".showcase__text-content",
+        ".about-us__text-content",
         { opacity: 0, y: -20, duration: 1 },
         { opacity: 1, y: 0, duration: 1 }
       ).fromTo(
-        ".showcase .underline ",
+        ".about-us .underline ",
         {
           "--myWidth": "0%",
           duration: 1,
@@ -71,28 +77,25 @@ function Showcase() {
     const { innerWidth } = window;
     return { innerWidth };
   }
-
   return (
-    <section className="showcase">
-      <div className="showcase-container">
-        <div className="showcase__text-content">
-          <h1 className="showcase__text">
-            Furniture that matches your{" "}
-            <span className="underline underline-light">needs</span>
+    <section className="about-us">
+      <div className="about-us-container">
+        <div className="about-us__text-content">
+          <h1 className="about-us__text">
+            Why <span className="underline underline-light">Trade?</span>
           </h1>
-          <p className="showcase__subtext">
-            where exquisite craftsmanship meets timeless design. With a passion
-            for creating comfortable and stylish living spaces, we curate a
-            diverse collection of furniture that transforms houses into homes.
+          <p className="about-us__subtext">
+            We're passionate about sustainability. Our furniture is thoughtfully
+            crafted with the environment in mind, ensuring your home is both
+            stylish and eco-conscious. Join us in making a positive impact.
           </p>
-          <ButtonLight text="Browse Our Collection" />
         </div>
-        <div className="showcase__image-content">
-          <img src={showcaseImg} alt="image of a chair" />
+        <div className="about-us__image-content">
+          <img src={aboutUsImg} alt="image of a chair" />
         </div>
       </div>
     </section>
   );
 }
 
-export default Showcase;
+export default AboutUs;

@@ -1,10 +1,10 @@
-.showcase {
+.about-us {
   background-color: var(--color-dark-bg);
   min-height: 100%;
 }
 
-.showcase-container {
-  padding: 4rem 3rem;
+.about-us-container {
+  padding: 6rem 3rem;
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -12,16 +12,15 @@
   justify-content: center;
 }
 
-.showcase__text-content,
-.showcase__image-content {
+.about-us__text-content,
+.about-us__image-content {
   flex: 1;
 }
-.showcase__text-content {
+.about-us__text-content {
   padding-top: 3rem;
-  padding-right: 3rem;
 }
 
-.showcase__text {
+.about-us__text {
   color: var(--color-light-text);
   font-family: var(--font-family-title);
   font-size: 8.1rem;
@@ -31,44 +30,45 @@
   letter-spacing: 0.2025rem;
   margin-bottom: 2.8rem;
 }
-.showcase__subtext {
+.about-us__subtext {
   color: var(--color-dark-text);
   margin-bottom: 4.5rem;
   font-family: var(--font-family-text);
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 179.625%; /* 3.4129rem */
+  line-height: 3.5rem;
+  letter-spacing: 0.05rem; /* 3.4129rem */
 
-  width: 91%;
+  width: 85%;
 }
 
 /* Media Queries */
 @media only screen and (max-width: 1246px) {
-  .showcase-container {
+  .about-us-container {
     padding: 4rem 5rem;
     max-width: 1000px;
   }
 
-  .showcase__text {
+  .about-us__text {
     font-size: 6.1rem;
   }
 
-  .showcase__text-content {
+  .about-us__text-content {
     padding-right: unset;
   }
 }
 
 @media only screen and (max-width: 940px) {
-  .showcase-container {
+  .about-us-container {
     flex-direction: column;
   }
 
-  .showcase__text {
+  .about-us__text {
     font-size: 8rem;
   }
 
-  .showcase__text-content {
+  .about-us__text-content {
     padding-right: unset;
     padding-top: 4rem;
     text-align: center;
@@ -76,7 +76,7 @@
     margin-bottom: 5rem;
   }
 
-  .showcase__subtext {
+  .about-us__subtext {
     margin-bottom: 4.5rem;
     font-size: 1.8rem;
     /* 3.4129rem */
@@ -85,21 +85,21 @@
 }
 
 @media only screen and (max-width: 785px) {
-  .showcase__text {
+  .about-us__text {
     font-size: 6rem;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  .showcase-container {
+  .about-us-container {
     flex-direction: column;
   }
 
-  .showcase__text {
+  .about-us__text {
     font-size: 4rem;
   }
 
-  .showcase__text-content {
+  .about-us__text-content {
     padding-right: unset;
     padding-top: 4rem;
     text-align: center;
@@ -107,7 +107,7 @@
     margin-bottom: 5rem;
   }
 
-  .showcase__subtext {
+  .about-us__subtext {
     color: var(--color-dark-text);
     margin-bottom: 4.5rem;
 
@@ -118,15 +118,15 @@
   }
 }
 @media only screen and (max-width: 376px) {
-  .showcase-container {
+  .about-us-container {
     flex-direction: column;
   }
 
-  .showcase__text {
+  .about-us__text {
     font-size: 3.5rem;
   }
 
-  .showcase__text-content {
+  .about-us__text-content {
     padding-right: unset;
     padding-top: 4rem;
     text-align: center;
@@ -134,7 +134,7 @@
     margin-bottom: 5rem;
   }
 
-  .showcase__subtext {
+  .about-us__subtext {
     color: var(--color-dark-text);
     margin-bottom: 4.5rem;
 
@@ -144,4 +144,3 @@
     width: 100%;
   }
 }
-/* Work on padding */

@@ -1,21 +1,13 @@
 // Import React Hooks
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 // Import Images
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 import data from "../../data";
 
-// Import Images
-import person1 from "../../assets/images/person-img-1.jpg";
-import person2 from "../../assets/images/person-img-2.jpg";
-import person3 from "../../assets/images/person-img-3.jpg";
-import person4 from "../../assets/images/person-img-4.jpg";
-import person5 from "../../assets/images/person-img-5.jpg";
-import person6 from "../../assets/images/person-img-6.jpg";
-import person7 from "../../assets/images/person-img-7.jpg";
-import person8 from "../../assets/images/person-img-8.jpg";
-import person9 from "../../assets/images/person-img-9.jpg";
 import { TestimoniesCard } from "../../components";
 
 // Import Swiper React components
@@ -45,65 +37,50 @@ function Testimonies() {
     };
   });
 
-  // Fix this shit
-
-  let num = () => {
+  let changeNumberofCardShownWhenResizingWindow = () => {
     if (windowSize.innerWidth > 1221) {
       return 3;
-    } else if (windowSize.innerWidth < 1220 && windowSize.innerWidth <= 825) {
+    } else if (windowSize.innerWidth < 1220 && windowSize.innerWidth > 825) {
       return 2;
     } else {
       return 1;
     }
   };
 
-  // useLayoutEffect(() => {
-  //   if (windowSize.innerWidth >= 947) {
-  //     let tl = gsap.timeline({
-  //       delay: 0.8,
-  //     });
-  //     tl.fromTo(
-  //       ".showcase__image-content",
-  //       { opacity: 0, y: -30, duration: 1 },
-  //       { opacity: 1, y: 0, duration: 1 }
-  //     )
-  //       .fromTo(
-  //         ".showcase__text-content",
-  //         { opacity: 0, x: -20, duration: 1 },
-  //         { opacity: 1, x: 0, duration: 1 }
-  //       )
-  //       .fromTo(
-  //         ".showcase .underline ",
-  //         {
-  //           "--myWidth": "0%",
-  //           duration: 1,
-  //         },
-  //         {
-  //           "--myWidth": "105%",
-  //           duration: 2,
-  //         }
-  //       );
-  //   } else if (windowSize.innerWidth <= 940) {
-  //     let tl = gsap.timeline({
-  //       delay: 0.8,
-  //     });
-  //     tl.fromTo(
-  //       ".showcase__text-content",
-  //       { opacity: 0, y: -20, duration: 1 },
-  //       { opacity: 1, y: 0, duration: 1 }
-  //     ).fromTo(
-  //       ".showcase .underline ",
-  //       {
-  //         "--myWidth": "0%",
-  //         duration: 1,
-  //       },
-  //       {
-  //         "--myWidth": "105%",
-  //         duration: 2,
-  //       }
-  //     );
-  //   }
-  // });
+  useLayoutEffect(() => {
+    if (windowSize.innerWidth >= 947) {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".testimonies-container",
+          start: "20px",
+          end: "bottom",
+          markers: true,
+        },
+      });
+      tl.fromTo(
+        ".testimonies__title",
+        { opacity: 0, y: -30 },
+        { opacity: 1, y: 0, duration: 0.9 }
+      )
+        .fromTo(
+          ".section__subtext",
+          { opacity: 0, y: -30 },
+          { opacity: 1, y: 0, duration: 0.9 }
+        )
+        .fromTo(".swiper", { opacity: 0 }, { opacity: 1, duration: 0.9 })
+        .fromTo(
+          ".testimonies .underline ",
+          {
+            "--myWidth": "0%",
+            duration: 1,
+          },
+          {
+            "--myWidth": "100%",
+            duration: 2,
+          }
+        );
+    }
+  });
 
   function getWindowSize() {
     const { innerWidth } = window;
@@ -123,12 +100,15 @@ function Testimonies() {
       </SwiperSlide>
     );
   });
+
+  const testContainer = useRef();
+
   return (
     <section className="testimonies">
       {console.log(windowSize.innerWidth)}
-      <div className="container testimonies-container">
+      <div className="container testimonies-container" ref={testContainer}>
         <h2 className="section__title testimonies__title">
-          People <span className="underline underline-dark">Love</span> Trade.
+          People <span className="underline underline-dark">LOVE</span> Trade.
         </h2>
         <p className="section__subtext">See what our customers are saying</p>
         <Swiper
@@ -140,71 +120,8 @@ function Testimonies() {
           navigation={true}
           modules={[Navigation, Pagination]}
           className="mySwiper"
-          slidesPerView={num()}
+          slidesPerView={changeNumberofCardShownWhenResizingWindow()}
         >
-          {/* <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person1}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person2}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person3}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person4}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person5}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person6}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person7}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person8}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimoniesCard
-              name="Emily"
-              customerImg={person9}
-              location="Toronto, Canada"
-            />
-          </SwiperSlide> */}
           {renderedCards}
         </Swiper>
       </div>

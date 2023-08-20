@@ -2,6 +2,7 @@ import "./App.css";
 import {
   Header,
   Testimonies,
+  AboutUs,
   Sales,
   FeaturesOne,
   FeaturesTwo,
@@ -13,6 +14,7 @@ function App() {
     <div className="app">
       <Header />
       <Testimonies />
+      <AboutUs />
       <Sales />
       <FeaturesOne />
       <FeaturesTwo />

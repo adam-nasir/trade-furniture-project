@@ -12,7 +12,7 @@ export default [
     id: 2,
     titleQuote: "Expectational",
     quote:
-      "Kudos to Trade for their exceptional customer service. I had questions about a dining table I wanted to buy, and their team was quick to provide detailed answers. The table arrived in perfect condition, and it's a beautiful addition to my home.",
+      "Kudos to Trade for their exceptional customer service. I had questions about a dining table I wanted to buy, and their team was quick to provide detailed answers. The table arrived in perfect condition, and it's beautiful",
     name: "Maria R",
     imgSrc: "src/assets/images/person-img-2.jpg",
     location: "Brampton, ON",
@@ -48,7 +48,7 @@ export default [
     id: 6,
     titleQuote: "A Gem",
     quote:
-      "Trade is a gem. I bought a beautiful writing desk for my home office, and I couldn't be happier. The desk is elegant, and the woodwork is exquisite. It's a perfect blend of form and function.",
+      "Trade is a gem. I bought a beautiful writing desk for my home office, and I couldn't be happier. The desk is elegant, and the woodwork is exquisite. It's a perfect blend of form and function. All my family and friend have been the desk",
     name: "Juan M",
     imgSrc: "src/assets/images/person-img-6.jpg",
     location: "Toronto, ON",
@@ -75,7 +75,7 @@ export default [
     id: 9,
     titleQuote: "Highly Recommended!",
     quote:
-      "I can't thank Trade enough for their excellent service. I ordered a custom-sized dining table, and it turned out beautifully. The communication throughout the process was great, and the table arrived on time. Highly recommended!",
+      "I can't thank Trade enough for their excellent service. I ordered a custom-sized dining table, and it turned out beautifully. I Highly Recommended Them!",
     name: "Jessica R",
     imgSrc: "src/assets/images/person-img-9.jpg",
     location: "Calgary, AB",
